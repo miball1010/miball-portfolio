@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200..900&display=swap');
+
+/* :root {
+  --main-black: #212121;
+  --main-color: #81caec;
+  --shadow-dark: rgba(0, 0, 0, 0.171);
+  --transparent-white: rgba(255, 255, 255, 0.678);
+
+} */
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+a {
+  color: #6A6A6A;
+
+}
+
+#app {
+  position: relative;
+  font-size: 16px;
+  background-color: #EFEFEF;
+  color: #6A6A6A;
+}
+
+video {
+  width: 100%;
+}
+
+.title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  text-align: justify;
+  line-height: 1.9rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+
+}
+
+.text {
+  font-size: 1rem;
+  text-align: justify;
+  line-height: 1.9rem;
+  letter-spacing: 1px;
+  white-space: pre-line;
+}
+
+.footer {
+  padding: 40px;
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+.box-border {
+  margin-bottom: 30px;
+  padding: 30px;
+  border-radius: 10px;
+  border: 1px solid rgb(228, 228, 228);
+  background-color: white;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.074);
+}
+
+.box-border:last-child {
+  margin-bottom: 0px;
+}
+
+.popup-content .box-border {
+  margin-bottom: 30px;
+}
+
+.page-container img {
+  display: block;
+  width: 100%;
+}
+
+.box-border .subtitle,
+.popup-container .subtitle {
+  margin: 10px 0;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #6A6A6A;
+}
+
+/* swiper */
+.my-swiper {
+  padding-top: 50px !important;
+}
+
+.slide-img {
+  border-radius: 12px;
+  border: 1px solid #6A6A6A;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  color: #6A6A6A;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.swiper-button-prev {
+  transform: scale(0.7);
+  top: 20px !important;
+  left: auto !important;
+  right: 60px !important;
+}
+
+.swiper-button-next {
+  transform: scale(0.7);
+  top: 20px !important;
+}
+
+@media screen and (max-width:540px) {
+  .title {
+    font-size: 1.2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .text {
+    font-size: 0.9rem;
+    line-height: 1.6rem;
+  }
+
+  .box-border {
+    padding: 15px;
+  }
+
+  .box-border:last-child {
+    margin-bottom: 0;
+  }
+
+  .footer {
+    padding: 30px;
+  }
+
+  .my-swiper {
+    padding-top: 40px !important;
+  }
+
+  .swiper-button-prev {
+    transform: scale(0.3);
+  }
+
+  .swiper-button-next {
+    transform: scale(0.3);
+  }
+}

@@ -1,0 +1,223 @@
+{
+    "skill": [
+        "vue",
+        "tailwind",
+        "figma",
+        "ps",
+        "ai",
+        "pr",
+        "ae"
+    ],
+    "works": [
+        {
+            "work_EN_title": "Web Projects",
+            "work_CN_title": "網頁作品",
+            "work": [
+                {
+                    "key": "gameEcho",
+                    "link": "gameEcho",
+                    "img": "gameEcho.jpg",
+                    "type":"web",
+                    "title": "Game Echo｜遊戲管理網站",
+                    "text": "Game Echo 是一個關於遊戲收藏與管理的個人專案，為了解決遊玩過大量遊戲後，容易忘記實際遊玩感受的困擾，而設計的一套遊戲清單與進度管理工具。<br>使用者可以在同一個畫面中瀏覽遊戲列表，並依照遊戲狀態與分類進行篩選，或透過搜尋快速找到特定遊戲；同時也能自由新增、編輯或刪除遊戲，記錄遊戲名稱、圖片、平台、分類、筆記，以及開始與完成時間。<br>專案中透過滾動式渲染提升大量資料顯示的效能，並搭配 Firebase 作為後端服務，負責使用者登入狀態管理與遊戲資料的存取。<br>使用技術：Vue 3 + Pinia ＋ Firebase ＋ TypeScript ＋ Tailwind CSS",
+                    "tag": [
+                        "Vue3",
+                        "TypeScript",
+                        "主視覺設計",
+                        "layout設計"
+                    ],
+                    "btn": [
+                        {
+                            "url": "https://miball1010.github.io/game-echo/#/login",
+                            "text": "前往網頁"
+                        },
+                        {
+                            "url": "https://github.com/miball1010/game-echo",
+                            "text": "前往GitHub"
+                        }
+                    ]
+                },
+                {
+                    "key": "flurryPop",
+                    "link": "flurryPop",
+                    "img": "flurryPop.jpg",
+                    "type":"web",
+                    "title": "Flurry Pop｜電商網站",
+                    "text": "這是六角學院線上課程的練習專案，目標是製作一個具備完整功能的電商網站。<br>前台提供商品瀏覽、購物車及下單流程，後台則能管理商品與訂單。與以往的一頁式網站不同，此作品需要處理資料串接、後台登入、狀態管理等邏輯，過程中讓我初步理解了電商網站的架構，也培養了處理較複雜專案的思維。<br>使用技術：Vue 3 + Vite + Pinia + TailwindCSS",
+                    "tag": [
+                        "Vue3",
+                        "主視覺設計",
+                        "layout設計"
+                    ],
+                    "btn": [
+                        {
+                            "url": "https://miball1010.github.io/FlurryPop.github.io/#/",
+                            "text": "前往網頁"
+                        },
+                        {
+                            "url": "https://github.com/miball1010/FlurryPop",
+                            "text": "前往GitHub"
+                        }
+                    ]
+                },
+                {
+                    "key": "woman",
+                    "link": "woman",
+                    "img": "woman.jpg",
+                    "title": "跨界真女子｜專題報導",
+                    "type":"web",
+                    "text": "此為3月8日婦女節的專題網站，動畫重點聚焦在主視覺。<br>當用戶向下滾動時，女子將奮力向上邁進，象徵堅韌與突破。下半部為文章頁面，採用襯線字體搭配顆粒感背景，呈現優雅而細膩的閱讀氛圍。",
+                    "tag": [
+                        "Vue3",
+                        "主視覺設計",
+                        "layout設計"
+                    ],
+                    "btn": [
+                        {
+                            "url": "https://www.businesstoday.com.tw/bt_topic/2025/powerofwomen/",
+                            "text": "前往網頁"
+                        }
+                    ]
+                },
+                {
+                    "key": "cny",
+                    "link": "cny",
+                    "img": "cny.jpg",
+                    "type":"web",
+                    "title": "新年抽獎網站",
+                    "text": "這是年度抽獎活動網頁。往年活動以填寫問卷或投票形式進行，今年則改為籤筒抽籤，增添濃厚的年節氛圍。<br>網站製作了多樣化的動畫效果，不僅包含抽籤動畫，還首次將滾動視差與自製動畫結合，營造出層次分明的視覺體驗。<br>與去年相比，今年活動同樣吸引了一萬人參加。然而，去年的活動持續六個月，今年僅用一個月便達成相同成果，顯示網站內容更具吸引力，活動效果也明顯提升。",
+                    "tag": [
+                        "HTML + Vue3",
+                        "主視覺設計",
+                        "layout設計"
+                    ],
+                    "btn": [
+                        {
+                            "url": "https://www.businesstoday.com.tw/bt_topic/2025/cny/",
+                            "text": "前往網頁"
+                        },
+                        {
+                            "url": "https://miball1010.github.io/cny-demo.github.io/",
+                            "text": "DEMO版本"
+                        }
+                    ]
+                },
+                {
+                    "key": "goodbye",
+                    "link": "goodbye",
+                    "img": "goodbye.jpg",
+                    "type":"web",
+                    "title": "好好說再見｜專題報導",
+                    "text": "這個網頁是我在公司獨立完成的第一個專案。雖然主視覺由前輩設計，但網頁製作與 layout 設計全由我負責。<br>需求方對專案的感受不一，一方希望呈現「快樂地說再見」，另一方則認為這是一件悲傷的事。於是我選擇以藍色與橘色作為主要色調，快樂時使用橘色，悲傷時使用藍色，飽和度適中，以溫柔的方式表現情感。<br>另外也製作了互動表單，這是我第一次與後端串接。最喜歡的部分是下方的推薦電影區，因為是電影介紹，所以設計成跑馬燈的方式呈現。雖然一開始完全不知道怎麼實現，但為了對自己的設計負責，我反覆嘗試，最後終於完成了理想的版本。",
+                    "tag": [
+                        "HTML + Vue3",
+                        "layout設計"
+                    ],
+                    "btn": [
+                        {
+                            "url": "https://www.businesstoday.com.tw/bt_topic/2024/timetosaygoodbye/",
+                            "text": "前往網頁"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "work_EN_title": "Graphics・Motion",
+            "work_CN_title": "平面設計・動畫",
+            "work": [
+                {
+                    "key": "graphic",
+                    "link": "graphic",
+                    "img": "cover.jpg",
+                    "type":"graphic",
+                    "title": "平面設計、手繪插畫",
+                    "text": "我從小就對繪畫充滿興趣，也是在不斷嘗試與失敗中逐步成長。<br>在美感上，我偏好乾淨、低飽和的風格，希望能透過簡潔卻不失溫度的畫面傳遞情感。主要使用 Photoshop、Illustrator 與 Procreate 進行創作。",
+                    "tag": [
+                        "Photoshop",
+                        "Illustrator",
+                        "Procreate"
+                    ]
+                },
+                {
+                    "key": "motion",
+                    "link": "motion",
+                    "img": "cover.jpg",
+                    "type":"motion",
+                    "title": "影音動畫",
+                    "text": "由於喜歡動畫所帶來的視覺張力與表現力，因此也會將動畫元素融入網站製作之中，讓整體呈現更具吸引力。<br>主要以 Premiere 與 After Effects 製作動畫，並搭配 Procreate 進行繪圖。",
+                    "tag": [
+                        "Premiere",
+                        "After Effects",
+                        "Procreate"
+                    ]
+                }
+            ]
+        }
+    ],
+    "graphics": [
+        {
+            "name": "13",
+            "type": ".jpg",
+            "number": 2,
+            "title": "Podcast宣傳貼文",
+            "text": "貼文為宣傳過年主題的Podcast內容。"
+        },
+        {
+            "name": "10",
+            "type": ".gif",
+            "number": 1,
+            "title": "蛇年賀圖",
+            "text": "幫公司做的新年賀圖，主要是用canva跟AE製作。"
+        },
+        {
+            "name": "2",
+            "type": ".jpg",
+            "number": 1,
+            "title": "聖誕活動海報",
+            "text": "公司聖誕活動的流程～旁邊的聖誕樹是同事會帶去活動的裝飾品，所以特別繪製的。"
+        },
+        {
+            "name": "9",
+            "type": ".jpg",
+            "number": 7,
+            "title": "懶人包",
+            "text": "懶人包擷取文章重點，以圖文並茂的方式呈現。"
+        },
+        {
+            "name": "6",
+            "type": ".jpg",
+            "number": 4,
+            "title": "podcast內廣",
+            "text": "印在週刊內的宣傳頁，以宣傳podcast內容為主"
+        },
+        {
+            "name": "1",
+            "type": ".jpg",
+            "number": 1,
+            "title": "Podcast封面設計",
+            "text": "以財經為主題的podcast，因為「摩王」的諧音，所以設計成魔王的造型，穿著長袖西裝顯現專業及威嚴。"
+        },
+        {
+            "name": "7",
+            "type": ".jpg",
+            "number": 3,
+            "title": "商品長圖",
+            "text": "放在官網商品頁中，除了將商品呈現好吃的樣貌外，也要介紹商品的原物料。"
+        },
+        {
+            "name": "5",
+            "type": ".jpg",
+            "number": 2,
+            "title": "畢業製作周邊",
+            "text": "芳香書籤：放在攤位的贈品，共四款，每一款書籤都有對應花香的味道，上方為花朵的花語，下方則為勵志小語，希望傳達正能量給所有拿到的人。\n拍貼邊框：配合故事而繪製一款黑白主題的框，頗受好評。"
+        },
+        {
+            "name": "3",
+            "type": ".jpg",
+            "number": 1,
+            "title": "電腦繪圖-米熊",
+            "text": "以厚塗的方式繪製。"
+        }
+    ]
+}
