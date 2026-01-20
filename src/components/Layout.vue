@@ -43,7 +43,7 @@ const workText = computed(() =>
     width: 90%;
     max-width: 1000px;
     margin: 0 auto;
-    padding-top: 140px;
+    padding-top: 120px;
     opacity: 0;
     transform: translateY(10px);
     animation: fade 0.5s ease-in forwards;
@@ -65,7 +65,7 @@ const workText = computed(() =>
     border: 1px solid #6A6A6A;
     background-color: white;
     padding: 60px;
-    margin-bottom: 80px;
+    margin-bottom: 60px;
 }
 
 .page-container .title-box .title {

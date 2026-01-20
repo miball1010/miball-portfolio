@@ -3,13 +3,33 @@ import { storeToRefs } from 'pinia'
 import { useCounterStore } from '@/stores/counter'
 const store = useCounterStore()
 const { isDev } = storeToRefs(store)
+
+import { onMounted } from 'vue'
+
+
+onMounted(() => {
+    // 確保 Instagram embed script 已經加載或動態載入
+    if (!window.instgrm) {
+        const script = document.createElement('script')
+        script.src = 'https://www.instagram.com/embed.js'
+        script.async = true
+        script.onload = () => {
+            window.instgrm.Embeds.process()  // 處理嵌入
+        }
+        document.body.appendChild(script)
+    } else {
+        window.instgrm.Embeds.process()  // 已經加載過就直接處理
+    }
+})
 </script>
 
 <template>
     <div class="box-border">
-        <div class="video square">
-            <video :src="`${isDev ? '/images/' : 'images/'}motion-2.mp4`" controls
-                :poster="`${isDev ? '/images/' : 'images/'}motion-poster-2.jpg`"></video>
+
+        <div ref="igContainer" class="instagram-embed">
+            <blockquote class="instagram-media ig-post"
+                data-instgrm-permalink="https://www.instagram.com/reel/DGSMsnBz_5F/" data-instgrm-version="14">
+            </blockquote>
         </div>
         <div class="subtitle">糾正病｜ IG短影片</div>
         <div class="text">
@@ -18,8 +38,6 @@ const { isDev } = storeToRefs(store)
             我：腳本、動畫製作 <br>
             同事：配音
         </div>
-        <!-- <a class="line_btn" href="https://www.instagram.com/reel/DGSMsnBz_5F/"
-                target="_blank">前往ig</a>  -->
     </div>
 
     <div class="box-border">
@@ -73,5 +91,15 @@ const { isDev } = storeToRefs(store)
 .video video {
     max-height: 455px;
     width: 100%;
+}
+
+.instagram-embed {
+    display: flex;
+    justify-content: center;
+}
+
+.instagram-embed .ig-post {
+    width: 100%;
+    max-width: 500px;
 }
 </style>
