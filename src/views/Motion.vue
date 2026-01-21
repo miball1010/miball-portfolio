@@ -23,8 +23,7 @@ onMounted(() => {
 
 <template>
     <div class="box-border">
-
-        <div ref="igContainer" class="instagram-embed">
+        <div class="instagram-embed">
             <blockquote class="instagram-media ig-post"
                 data-instgrm-permalink="https://www.instagram.com/reel/DGSMsnBz_5F/" data-instgrm-version="14">
             </blockquote>
@@ -86,18 +85,8 @@ onMounted(() => {
     margin: 0 auto;
 }
 
-.video video {
-    max-height: 455px;
-    width: 100%;
-}
-
 .instagram-embed {
     display: flex;
     justify-content: center;
-}
-
-.instagram-embed .ig-post {
-    width: 100%;
-    max-width: 500px;
-}
+   }
 </style>
