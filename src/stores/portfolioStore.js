@@ -1,7 +1,7 @@
 import { ref, onMounted } from 'vue'
 import { defineStore } from 'pinia'
 
-export const useCounterStore = defineStore('counter', () => {
+export const usePortfolioStore = defineStore('portfolio', () => {
   const isDev = import.meta.env.DEV
 
   const works = ref([])

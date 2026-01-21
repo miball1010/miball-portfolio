@@ -1,8 +1,6 @@
 <script setup>
-import { storeToRefs } from 'pinia'
-import { useCounterStore } from '@/stores/counter'
-const store = useCounterStore()
-const { isDev } = storeToRefs(store)
+import { usePortfolioStore } from '@/stores/portfolioStore'
+const store = usePortfolioStore()
 </script>
 
 <template>
@@ -21,7 +19,7 @@ const { isDev } = storeToRefs(store)
         </div>
     </div>
     <div class="box-border">
-        <img :src="`${isDev ? '/images/' : 'images/'}web-flurryPop-${item}.jpg`" :alt="`FlurryPop-${item}`"
+        <img :src="`${store.isDev ? '/images/' : 'images/'}web-flurryPop-${item}.jpg`" :alt="`FlurryPop-${item}`"
             loading="lazy" v-for="item in 3" :key="item">
         <div class="subtitle">商品與訂單管理介面</div>
         <div class="text">

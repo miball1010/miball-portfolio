@@ -6,10 +6,8 @@ import 'swiper/css/mousewheel'
 import 'swiper/css/free-mode'
 import 'swiper/css/navigation'
 
-import { storeToRefs } from 'pinia'
-import { useCounterStore } from '@/stores/counter'
-const store = useCounterStore()
-const { isDev } = storeToRefs(store)
+import { usePortfolioStore } from '@/stores/portfolioStore'
+const store = usePortfolioStore()
 
 const modules = [Mousewheel, Navigation]
 
@@ -45,7 +43,7 @@ const props = defineProps({
 >
 
       <SwiperSlide v-for="item in props.number" :key="item" class="my-slide">
-        <img :src="`${isDev ? '/images/' : 'images/'}${img}${item}.jpg`" alt="" class="slide-img" />
+        <img :src="`${store.isDev ? '/images/' : 'images/'}${img}${item}.jpg`" alt="" class="slide-img" />
       </SwiperSlide>
     </Swiper>
   </div>

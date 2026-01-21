@@ -5,8 +5,8 @@ import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 gsap.registerPlugin(ScrollTrigger);
 import { storeToRefs } from 'pinia'
-import { useCounterStore } from '@/stores/counter'
-const store = useCounterStore()
+import { usePortfolioStore } from '@/stores/portfolioStore'
+const store = usePortfolioStore()
 const { skill } = storeToRefs(store)
 
 let timeoutId

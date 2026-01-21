@@ -2,8 +2,8 @@
 import { useRouter } from 'vue-router'
 const router = useRouter()
 import { storeToRefs } from 'pinia'
-import { useCounterStore } from '@/stores/counter'
-const store = useCounterStore()
+import { usePortfolioStore } from '@/stores/portfolioStore'
+const store = usePortfolioStore()
 const { works } = storeToRefs(store)
 
 function work_click(work) {

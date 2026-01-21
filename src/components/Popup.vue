@@ -1,9 +1,14 @@
 <script setup>
+import ImageLoading from '@/components/ImageLoading.vue'
 import { storeToRefs } from 'pinia'
-import { useCounterStore } from '../stores/counter'
-const store = useCounterStore()
+import { usePortfolioStore } from '../stores/portfolioStore'
+const store = usePortfolioStore()
 const { popupIsopen, nowPopup, popupContent } = storeToRefs(store)
 const { popupCloseClick } = store
+
+function getImgSrc(item) {
+    return (store.isDev ? '/images/' : 'images/') + `graphic-${nowPopup.value.name}-${item}${nowPopup.value.type}`
+}
 </script>
 
 <template>
@@ -12,8 +17,10 @@ const { popupCloseClick } = store
         <div class="popup-content" ref="popupContent">
             <div class="overlay">
                 <div class="box-border">
-                    <img :src="`${store.isDev ? '/images/' : 'images/'}graphic-${nowPopup.name}-${item}${nowPopup.type}`"
-                        :alt="nowPopup.title + item" v-for="item in nowPopup.number" :key="item">
+                    <div class="img-box">
+                        <ImageLoading :src="getImgSrc(item)" img-class="popup-img" :alt="nowPopup.title + item"
+                            v-for="item in nowPopup.number" :key="item" />
+                    </div>
                     <div class="subtitle" v-if="nowPopup.title">{{ nowPopup.title }}</div>
                     <div class="text" v-if="nowPopup.text">{{ nowPopup.text }}</div>
                 </div>
@@ -24,6 +31,12 @@ const { popupCloseClick } = store
 </template>
 
 <style scoped>
+.img-box {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
 .popup-container {
     position: fixed;
     width: 100%;
@@ -93,16 +106,6 @@ const { popupCloseClick } = store
 .active .overlay {
     opacity: 1;
     transform: translateY(0px);
-}
-
-img {
-    display: block;
-    width: 100%;
-    margin-bottom: 20px;
-}
-
-img:last-child {
-    margin: 0;
 }
 
 .popup-close {

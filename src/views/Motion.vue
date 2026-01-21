@@ -1,8 +1,6 @@
 <script setup>
-import { storeToRefs } from 'pinia'
-import { useCounterStore } from '@/stores/counter'
-const store = useCounterStore()
-const { isDev } = storeToRefs(store)
+import { usePortfolioStore } from '@/stores/portfolioStore'
+const store = usePortfolioStore()
 
 import { onMounted } from 'vue'
 
@@ -42,8 +40,8 @@ onMounted(() => {
 
     <div class="box-border">
         <div class="video square">
-            <video :src="`${isDev ? '/images/' : 'images/'}motion-1.mp4`" controls
-                :poster="`${isDev ? '/images/' : 'images/'}motion-poster-1.jpg`"></video>
+            <video :src="`${store.isDev ? '/images/' : 'images/'}motion-1.mp4`" controls
+                :poster="`${store.isDev ? '/images/' : 'images/'}motion-poster-1.jpg`"></video>
         </div>
         <div class="subtitle">流感懶人包</div>
         <div class="text">

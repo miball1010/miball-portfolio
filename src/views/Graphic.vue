@@ -1,18 +1,23 @@
 <script setup>
+import ImageLoading from '@/components/ImageLoading.vue'
 import { storeToRefs } from 'pinia'
-import { useCounterStore } from '@/stores/counter'
-const store = useCounterStore()
+import { usePortfolioStore } from '@/stores/portfolioStore'
+const store = usePortfolioStore()
 const { graphics } = storeToRefs(store)
+const { popupClick } = store
+
+function getImgSrc(item) {
+    return (store.isDev ? '/images/' : 'images/') + `graphic-${item.name}-1${item.type}`
+}
 </script>
 
 <template>
     <div class="graphic-box">
-        <div class="box" v-for="(item, index) in graphics" @click="store.popupClick(item)" :key="item.name">
-            <img :src="`${store.isDev ? '/images/' : 'images/'}graphic-${item.name}-1${item.type}`" alt="">
+        <div class="box" v-for="item in graphics" :key="item.name" @click="popupClick(item)">
+            <ImageLoading :src="getImgSrc(item)" imgClass="graphic-img" />
             <div class="bg"></div>
             <div class="text">{{ item.title }}</div>
         </div>
-
     </div>
 </template>
 
@@ -37,15 +42,6 @@ const { graphics } = storeToRefs(store)
 
 .box:hover {
     transform: scale(1.05);
-}
-
-.box img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
 }
 
 .box .bg {
@@ -76,6 +72,7 @@ const { graphics } = storeToRefs(store)
 .box:hover .bg {
     opacity: 1;
 }
+
 .box:hover .text {
     opacity: 1;
     top: 50%;

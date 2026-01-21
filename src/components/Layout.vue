@@ -4,8 +4,8 @@ import { computed } from 'vue'
 import { useRoute } from 'vue-router'
 const route = useRoute()
 import { storeToRefs } from 'pinia'
-import { useCounterStore } from '@/stores/counter'
-const store = useCounterStore()
+import { usePortfolioStore } from '@/stores/portfolioStore'
+const store = usePortfolioStore()
 const { works, popupNumber } = storeToRefs(store)
 
 const currentPage = route.path.split('/').pop()
