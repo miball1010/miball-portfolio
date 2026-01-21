@@ -1,0 +1,1 @@
+import{u as a,c as o,r,F as t,o as n,a as c,b as l}from"./index-5tQsQLkC.js";const u=["src","alt"],m={__name:"WebGoodbye",setup(_){const s=a();return(i,d)=>(n(),o(t,null,r(5,e=>c("img",{src:`${l(s).isDev?"/images/":"images/"}web-goodbye-${e}.jpg`,alt:`好好說再見-${e}`,loading:"lazy",key:e},null,8,u)),64))}};export{m as default};
